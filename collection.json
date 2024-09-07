@@ -1,0 +1,157 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-09-07T23:30:06.656Z",
+  "__export_source": "insomnia.desktop.app:v9.3.3",
+  "resources": [
+    {
+      "_id": "req_c9f29e654d5a493fad6cdddb2e823ad9",
+      "parentId": "wrk_831988ae2e6b4cbca68e613e598aa2c8",
+      "modified": 1725740458224,
+      "created": 1725739225399,
+      "url": "localhost:8080/api/v1/endereco/08223000",
+      "name": "Endereço",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/9.3.3"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1725739225399,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_831988ae2e6b4cbca68e613e598aa2c8",
+      "parentId": null,
+      "modified": 1725739216312,
+      "created": 1725739216312,
+      "name": "Endereços(GraalVM)",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_6690cd36f26744f8a5fa55861641b89b",
+      "parentId": "wrk_831988ae2e6b4cbca68e613e598aa2c8",
+      "modified": 1725741491066,
+      "created": 1725740469119,
+      "url": "localhost:8080/api/v1/endereco/08223000/extenso",
+      "name": "Endereço por extenso",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_c9167c568cc7456fa5fa0f3716e3d82c",
+          "name": "numero",
+          "value": "789",
+          "description": "",
+          "disabled": false
+        },
+        {
+          "id": "pair_614578637f5549879bfef6fe7f3208ae",
+          "name": "clipboard",
+          "value": "false",
+          "description": "",
+          "disabled": true
+        },
+        {
+          "id": "pair_a7a892fbb2f0439fb11d26f7e982a856",
+          "name": "clipboard",
+          "value": "true",
+          "description": "",
+          "disabled": false
+        }
+      ],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/9.3.3"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1725736543968.25,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5a74b872e2db460885ef27ae0f0baa16",
+      "parentId": "wrk_831988ae2e6b4cbca68e613e598aa2c8",
+      "modified": 1725739485199,
+      "created": 1725739396449,
+      "url": "localhost:8080/api/v1/endereco/08223000/dados",
+      "name": "Dados",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_5927a74d9da7425996af381ca0ab0f34",
+          "name": "nome_campo",
+          "value": "logradouro,bairro,localidade,uf",
+          "description": "",
+          "disabled": false
+        }
+      ],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/9.3.3"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1725733862537.5,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_019e7c721c531c17720b9f140b3dee1ec85cd64d",
+      "parentId": "wrk_831988ae2e6b4cbca68e613e598aa2c8",
+      "modified": 1725739216314,
+      "created": 1725739216314,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1725739216314,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_019e7c721c531c17720b9f140b3dee1ec85cd64d",
+      "parentId": "wrk_831988ae2e6b4cbca68e613e598aa2c8",
+      "modified": 1725739216315,
+      "created": 1725739216315,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    }
+  ]
+}
