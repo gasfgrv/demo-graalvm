@@ -34,25 +34,18 @@
 
     <build>
         <plugins>
-<!--            <plugin>-->
-<!--                <groupId>org.graalvm.buildtools</groupId>-->
-<!--                <artifactId>native-maven-plugin</artifactId>-->
-<!--                <version>0.10.2</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <goals>-->
-<!--                            <goal>compile</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <configuration>-->
-<!--                    <mainClass>com.github.gasfgrv.demo_graalvm.DemoGraalvmApplication</mainClass>-->
-<!--                    <verbose>true</verbose>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>
+                                process-aot
+                            </goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <mainClass>com.github.gasfgrv.demo_graalvm.DemoGraalvmApplication</mainClass>
                 </configuration>
@@ -69,16 +62,8 @@
                         <groupId>org.graalvm.buildtools</groupId>
                         <artifactId>native-maven-plugin</artifactId>
                         <version>0.10.2</version>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>compile-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
                         <configuration>
-                            <mainClass>com.github.gasfgrv.demo_graalvm.DemoGraalvmApplication</mainClass>
-                            <verbose>true</verbose>
+                            <skip>true</skip>
                         </configuration>
                     </plugin>
                 </plugins>
