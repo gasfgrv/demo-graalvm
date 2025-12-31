@@ -26,5 +26,4 @@ public class ViaCepClient {
                 .body(ViaCepResponse.class);
     }
 
-
 }
