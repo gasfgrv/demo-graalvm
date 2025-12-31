@@ -1,11 +1,12 @@
-package com.github.gasfgrv.demo_graalvm;
+package com.github.gasfgrv.graalvm;
 
+import com.github.gasfgrv.graalvm.infrastructure.config.NativeImageConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ImportRuntimeHints;
 
-@EnableFeignClients
 @SpringBootApplication
+@ImportRuntimeHints(NativeImageConfig.class)
 public class DemoGraalvmApplication {
 
     public static void main(String[] args) {

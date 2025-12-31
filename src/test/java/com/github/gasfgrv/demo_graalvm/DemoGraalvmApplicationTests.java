@@ -1,13 +1,13 @@
 package com.github.gasfgrv.demo_graalvm;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
 class DemoGraalvmApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+        Assertions.assertThat(4 % 2).isEven();
+    }
 
 }
