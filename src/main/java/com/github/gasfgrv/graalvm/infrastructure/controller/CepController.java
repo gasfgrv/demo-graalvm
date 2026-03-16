@@ -6,11 +6,7 @@ import com.github.gasfgrv.graalvm.domain.port.EnderecoPort;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -37,9 +33,10 @@ public class CepController {
     }
 
     @GetMapping("/extenso")
-    public ResponseEntity<Map<String, String>> obterEnderecoPorExtenso(@PathVariable String cep,
-                                                                       @RequestParam int numero,
-                                                                       @RequestParam(value = "clipboard") boolean salvarNaClipBoard) {
+    public ResponseEntity<Map<String, String>> obterEnderecoPorExtenso(
+            @PathVariable String cep,
+            @RequestParam int numero,
+            @RequestParam(value = "clipboard", defaultValue = "false") boolean salvarNaClipBoard) {
         log.info("Requisição recebida para /api/v1/endereco/{}/extenso?numero={}&clipboard={}", cep, numero, salvarNaClipBoard);
         String enderecoPorExtenso = client.obterEnderecoPorExtenso(cep, numero);
 
